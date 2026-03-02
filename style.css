@@ -1,0 +1,162 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.dark {
+    background: #1b1b1b;
+    color: white;
+}
+
+#tema-btn {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background: #444;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#tema-btn:hover {
+    background: #222;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.dark .container {
+    background: #2c2c2c;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+input[type="text"], input[type="date"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    background: #e9e9e9;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.dark li {
+    background: #3a3a3a;
+}
+
+li.done {
+    background: #c3f7c3;
+    text-decoration: line-through;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.delete {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.delete:hover {
+    color: darkred;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    #tema-btn {
+        width: 100%;
+    }
+}
+
+.icon-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    background: #444;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-btn:hover {
+    background: #222;
+}
+
+.dark .icon-btn {
+    background: #666;
+}
+
+.campo-prazo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.campo-prazo label {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
