@@ -25,7 +25,7 @@ if (isset($_POST["tarefa"]) && $_POST["tarefa"] != "") {
 
 if (isset($_GET["done"])) {
     $id = $_GET["done"];
-    $tarefas[$id]["concluida"] = !$tarefas[$id]["concluida"]; // alternar
+    $tarefas[$id]["concluida"] = !$tarefas[$id]["concluida"]; 
     file_put_contents($arquivo, json_encode($tarefas, JSON_PRETTY_PRINT));
     header("Location: index.php");
     exit;
@@ -35,7 +35,7 @@ if (isset($_GET["done"])) {
 if (isset($_GET["apagar"])) {
     $id = $_GET["apagar"];
     unset($tarefas[$id]);
-    $tarefas = array_values($tarefas); // reorganiza índices
+    $tarefas = array_values($tarefas); 
     file_put_contents($arquivo, json_encode($tarefas, JSON_PRETTY_PRINT));
     header("Location: index.php");
     exit;
